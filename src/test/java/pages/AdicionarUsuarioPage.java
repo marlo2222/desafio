@@ -47,6 +47,10 @@ public class AdicionarUsuarioPage extends BasePage {
         return textoAlerta();
     }
 
+    public void fecharAlerta(){
+        fechar();
+    }
+
 
 
 

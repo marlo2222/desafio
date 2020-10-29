@@ -51,5 +51,17 @@ public class AdicionarClienteSteps {
     @Então("um novo usuario deve ser cadastrado com sucesso")
     public void um_novo_usuario_deve_ser_cadastrado_com_sucesso() {
         Assert.assertEquals("Customer added successfully with customer id :6",adUsuarioPage.cadastrado());
+        adUsuarioPage.fecharAlerta();
+    }
+
+    @Então("o usuario não deve ser cadastrado")
+    public void o_usuario_não_deve_ser_cadastrado() {
+
+    }
+
+    @Então("um alerta com o seguinte texto é exibido {string}")
+    public void um_alerta_com_o_seguinte_texto_é_exibido(String texto) {
+        Assert.assertEquals(texto, adUsuarioPage.cadastrado());
+        adUsuarioPage.fecharAlerta();
     }
 }

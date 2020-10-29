@@ -24,6 +24,19 @@ Funcionalidade: Adicionar clientes ao sistema.
         | fistname | lastname | postcode |
         | "Marlo"  |"Henrique"|"62900000"|
 
-    @ignore
-    Cenario: Não deve cadastrar um nono usuario com informações ja existentes
+
+    Cenario: Não deve cadastrar um usuario com informações ja existentes
+      Dado que estou acessando a opção Bank Manager Login
+      Quando seleciono a opção "Add Customer"
+      E preencho os campos <fistname>, <lastname> e <postcode>
+      E clico no botão "Add Customer" para salvar
+      Então um novo usuario deve ser cadastrado com sucesso
+      Quando preencho os campos <fistname>, <lastname> e <postcode>
+      E clico no botão "Add Customer" para salvar
+      Então o usuario não deve ser cadastrado
+      E um alerta com o seguinte texto é exibido "Please check the details. Customer may be duplicate."
+
+      Exemplos:
+        | fistname | lastname | postcode |
+        | "Marlo"  |"Henrique"|"62900000"|
 

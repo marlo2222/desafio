@@ -29,6 +29,9 @@ public class BasePage {
     public String textoAlerta(){
         return Config.ObterDriver().switchTo().alert().getText();
     }
+    public void fechar(){
+        Config.ObterDriver().switchTo().alert().dismiss();
+    }
 
-    
+
 }
