@@ -8,10 +8,7 @@ import java.util.List;
 
 public class DSL {
 
-    public void escrever(){
-
-    }
-
+   git
     public String obterTexto(By element){
         return DriverFactory.ObterDriver().findElement(element).getText();
     }
@@ -20,9 +17,6 @@ public class DSL {
         return elemento.size() > 0;
     }
 
-    public void inferno(){
-        DriverFactory.ObterDriver().findElement(By.xpath("//button[contains(.,'Customer Login')]")).click();
-    }
 
     public void clicarPorTexto(By by){
         DriverFactory.ObterDriver().findElement(by).click();
