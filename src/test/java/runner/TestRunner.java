@@ -1,19 +1,16 @@
 package runner;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.SnippetType;
-import cucumber.api.junit.Cucumber;
+
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/features",
-        tags = {"~@ignore"},
+        features = {"src/test/features"},
         plugin = {"pretty", "html:target/HtmlReport", "json:target/JsonReport/json.json"},
-        monochrome = false,
-        snippets = SnippetType.CAMELCASE,
-        dryRun = false,
-        strict = false
+        glue = {""}
 )
 public class TestRunner {
 }

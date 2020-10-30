@@ -1,20 +1,19 @@
 package pages;
 
-import config.BasePage;
-import config.Config;
+import config.DSL;
+import config.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class AdicionarUsuarioPage extends BasePage {
+public class BankManagerLoginPage extends DSL {
 
     private WebDriver driver;
-    private String custumerLogin = "//button[contains(.,'Custumer Login')]";
-    private String bankManagerLogin = "//button[contains(.,'Bank Manager Login')]";
 
-    public AdicionarUsuarioPage() {
-        driver = Config.ObterDriver();
+
+    public BankManagerLoginPage() {
+        driver = DriverFactory.ObterDriver();
         PageFactory.initElements(driver, this);
     }
 
@@ -37,6 +36,22 @@ public class AdicionarUsuarioPage extends BasePage {
     }
     public void escreverPostCode(String postCode){
         escrever(By.xpath("(//input[@type='text'])[3]"), postCode);
+    }
+    public void escreverCustomer(String fistName){
+        select(By.xpath("//select[@id='userSelect']"), "marlo henrique");
+    }
+    public void escreverCurrency(){
+        select(By.xpath("//select[@id='currency']"), "Dollar");
+    }
+    public void searchCustomer(String name){
+        escrever(By.xpath("//input[@type='text']"), name);
+    }
+    public String searchCustomerResult(String texto){
+        return obterTexto(By.xpath("//td[contains(.,'"+texto+"')]"));
+    }
+
+    public boolean searchCustomerResultExist(String texto){
+        return existeElementoPorTexto(By.xpath("//td[contains(.,'"+texto+"')]"));
     }
 
     public void clicarSalvar(){

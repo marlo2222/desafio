@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 
-public class Config {
+public class DriverFactory {
 
     public static WebDriver driver;
 
@@ -28,7 +28,7 @@ public class Config {
 
     @After
     public void FecharJanela() {
-      //  driver.quit();
+       // driver.quit();
         System.out.println("Fim de teste");
 
     }
