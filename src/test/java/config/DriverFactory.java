@@ -2,6 +2,7 @@ package config;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -28,7 +29,10 @@ public class DriverFactory {
 
     @After
     public void FecharJanela() {
-       // driver.quit();
+        //scenario.write("Finished scenario");
+       // if (scenario.isFailed())
+           // scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
+        driver.quit();
         System.out.println("Fim de teste");
 
     }

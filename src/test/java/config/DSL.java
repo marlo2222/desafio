@@ -31,7 +31,6 @@ public class DSL {
         Select se = new Select(DriverFactory.ObterDriver().findElement(by));
 
         List<WebElement> Options = se.getOptions();
-        System.out.println(Options.toString());
         for(WebElement option:Options){
             if(option.getText().equals(name)) {
                 option.click();

@@ -53,7 +53,7 @@ Funcionalidade: Adicionar clientes ao sistema.
         Então um novo usuario deve ser cadastrado com sucesso
         Quando eu clico em "Home"
         E eu clico em "Customer Login"
-        E escolho o usuario <fistname>, <lastname> no campo Your Name
+        E escolho o usuario "marlo henrique" no campo Your Name
         Então o botão "Login" deve ser habilitado
         Quando eu clico em "Login"
         Então deve ser ser exibido a mensagem de boas vindas
