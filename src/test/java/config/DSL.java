@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DSL {
 
-   git
+
     public String obterTexto(By element){
         return DriverFactory.ObterDriver().findElement(element).getText();
     }
@@ -37,6 +37,7 @@ public class DSL {
     public void escrever(By by, String texto){
         DriverFactory.ObterDriver().findElement(by).sendKeys(texto);
     }
+
     public String textoAlerta(){
         return DriverFactory.ObterDriver().switchTo().alert().getText();
     }

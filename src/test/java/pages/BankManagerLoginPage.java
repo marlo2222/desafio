@@ -21,9 +21,6 @@ public class BankManagerLoginPage extends DSL {
         driver.navigate().to(url);
     }
 
-    public boolean existeElementoTexto(String texto){
-        return existeElementoPorTexto(By.xpath("//button[contains(.,'"+texto+"')]"));
-    }
     public void clicarPorTexto(String texto){
         clicarPorTexto(By.xpath("//button[contains(.,'"+texto+"')]"));
     }

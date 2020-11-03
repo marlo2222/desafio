@@ -16,20 +16,21 @@ Funcionalidade: Adicionar clientes ao sistema.
     Cenario: Devo cadastrar um novo usuario com sucesso
       Quando eu clico em "Home"
       E eu clico em "Bank Manager Login"
-      E seleciono a opção "Add Customer"
+      E eu clico em "Add Customer"
       E preencho os campos <fistname>, <lastname> e <postcode>
       E clico no botão "Add Customer" para salvar
       Então um novo usuario deve ser cadastrado com sucesso
 
+
       Exemplos:
         | fistname | lastname | postcode |
-        | "marlo"  |"menrique"|"62900000"|
+        | "marlo"  |"henrique"|"62900000"|
 
 
      Cenario: devo poder realizar login no sistema:
        Quando eu clico em "Home"
        E eu clico em "Bank Manager Login"
-       E seleciono a opção "Add Customer"
+       E eu clico em "Add Customer"
        E preencho os campos <fistname>, <lastname> e <postcode>
        E clico no botão "Add Customer" para salvar
        Então um novo usuario deve ser cadastrado com sucesso
@@ -47,7 +48,7 @@ Funcionalidade: Adicionar clientes ao sistema.
       Cenario: devo poder realizar logout no sistema:
         Quando eu clico em "Home"
         E eu clico em "Bank Manager Login"
-        E seleciono a opção "Add Customer"
+        E eu clico em "Add Customer"
         E preencho os campos <fistname>, <lastname> e <postcode>
         E clico no botão "Add Customer" para salvar
         Então um novo usuario deve ser cadastrado com sucesso
@@ -57,7 +58,7 @@ Funcionalidade: Adicionar clientes ao sistema.
         Então o botão "Login" deve ser habilitado
         Quando eu clico em "Login"
         Então deve ser ser exibido a mensagem de boas vindas
-        Quando eu clico no botão "Logout"
+        Quando eu clico em "Logout"
         Então o botão "Login" deve estar desabilitado
         E devo ser sair do sistema
 
@@ -69,13 +70,13 @@ Funcionalidade: Adicionar clientes ao sistema.
       Cenario: devo remover um cliente cadastrado no sistema:
         Quando eu clico em "Home"
         E eu clico em "Bank Manager Login"
-        Quando seleciono a opção "Add Customer"
+        E eu clico em "Add Customer"
         E preencho os campos <fistname>, <lastname> e <postcode>
         E clico no botão "Add Customer" para salvar
         Então um novo usuario deve ser cadastrado com sucesso
-        Quando seleciono a opção "Customers"
+        Quando eu clico em "Customers"
         E pesquiso pelo cliente <fistname> no campo search customer.
-        E clico no botão "Delete" para remover o cliente
+        E eu clico em "Delete"
         Então o cliente <fistname> deve ser removido com sucesso
 
          Exemplos:
@@ -84,16 +85,16 @@ Funcionalidade: Adicionar clientes ao sistema.
 
 
       Cenario: Não deve cadastrar um usuario com informações ja existentes
-         Quando eu clico em "Home"
-         E eu clico em "Bank Manager Login"
-         E seleciono a opção "Add Customer"
-         E preencho os campos <fistname>, <lastname> e <postcode>
-         E clico no botão "Add Customer" para salvar
-         Então um novo usuario deve ser cadastrado com sucesso
-         Quando preencho os campos <fistname>, <lastname> e <postcode>
-         E clico no botão "Add Customer" para salvar
-         Então o usuario não deve ser cadastrado
-         E um alerta com o seguinte texto é exibido "Please check the details. Customer may be duplicate."
+        Quando eu clico em "Home"
+        E eu clico em "Bank Manager Login"
+        E eu clico em "Add Customer"
+        E preencho os campos <fistname>, <lastname> e <postcode>
+        E clico no botão "Add Customer" para salvar
+        Então um novo usuario deve ser cadastrado com sucesso
+        Quando preencho os campos <fistname>, <lastname> e <postcode>
+        E clico no botão "Add Customer" para salvar
+        Então o usuario não deve ser cadastrado
+        E um alerta com o seguinte texto é exibido "Please check the details. Customer may be duplicate."
 
         Exemplos:
           | fistname | lastname | postcode |
